@@ -1,6 +1,6 @@
 {
- "short_name": "PWA con MD",
- "name": "PWA con Material Design",
+ "short_name": "BD11:11",
+ "name": "PWA con Material Design y BD",
  "id": "/index.html",
  "start_url": "/index.html",
  "display": "standalone",
@@ -9,7 +9,7 @@
  "display_override": [
   "window-controls-overlay"
  ],
- "description": "PWA con componentes de Material Design.",
+ "description": "PWA con componentes de Material Design y base de datos.",
  "screenshots": [
   {
    "src": "/img/screenshot_horizontal.png",
