@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es" class="light dark">
+
+<head>
+
+ <meta charset="UTF-8">
+ <title>PWA con MD</title>
+
+ <!-- Resumen para los motores de búsqueda. -->
+ <meta name="description" content="Ejemplo de PWA con Material Design">
+
+ <script src="js/registraServiceWorker.js"></script>
+
+ <meta name="viewport" content="width=device-width">
+
+ <!-- Color de la barra de navegación de Chrome en dispositivos móviles. -->
+ <meta name="theme-color" content="#fffbfe">
+
+ <!-- Ícono para la página web, que normalmente se pone en la raíz del sitio.
+  Puede ser diferente para cada página. -->
+ <link rel="icon" sizes="32x32" href="favicon.ico">
+
+ <!-- Configuración de la PWA para Chrome, Edge y Safari.
+  Debe ponerse en todas las páginas. -->
+ <link rel="manifest" href="site.webmanifest">
+
+ <!-- Permite a los navegadores, que como Safari no soportan el estándar
+  completo de custom elementsm, lo cumplan totalmente. Debe ponerse en todas
+  las páginas. -->
+ <script src="ungap/custom-elements.js"></script>
+
+ <!-- Configuración de todas las páginas con JavaSript. -->
+ <script type="module" src="js/configura.js"></script>
+ <link rel="stylesheet" href="css/estilos.css">
+ <link rel="stylesheet" href="css/transicion_completa.css">
+
+</head>
+
+<body>
+
+ <md-top-app-bar class="center-aligned">
+
+  <h1>PWA con MD</h1>
+
+  <button is="md-menu-button" slot="navigation"></button>
+
+  <button type="button" class="md-standard-icon-button avatar" title="Perfil"
+    slot="action">
+   <span class="material-symbols-outlined">account_circle</span>
+  </button>
+
+ </md-top-app-bar>
+
+ <main>
+  <p>
+   Esta es la página principal de la app. Las X que siguen son para que veas
+   como se comporta cuando se hace scroll.
+  </p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+  <p>x</p>
+ </main>
+
+ <nav-drw></nav-drw>
+
+</body>
+
+</html>

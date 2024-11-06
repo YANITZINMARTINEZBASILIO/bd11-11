@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es" class="light dark">
+
+<head>
+
+ <meta charset="UTF-8">
+ <title>Íconos - PWA con MD</title>
+
+ <script src="js/registraServiceWorker.js"></script>
+
+ <meta name="viewport" content="width=device-width">
+ <meta name="theme-color" content="#fffbfe">
+ <link rel="icon" sizes="32x32" href="favicon.ico">
+ <link rel="manifest" href="site.webmanifest">
+ <script src="ungap/custom-elements.js"></script>
+
+ <script type="module" src="js/configura.js"></script>
+ <link rel="stylesheet" href="css/estilos.css">
+ <link rel="stylesheet" href="css/transicion_completa.css">
+
+</head>
+
+<body>
+
+ <md-top-app-bar>
+
+  <h1>Íconos</h1>
+
+  <button is="md-menu-button" slot="navigation"></button>
+
+ </md-top-app-bar>
+
+ <main>
+
+  <button type="button" class="md-standard-icon-button">
+   <span class="material-symbols-outlined">favorite</span>
+  </button>
+
+  <button type="button" class="md-standard-icon-button" disabled>
+   <span class="material-symbols-outlined">bolt</span>
+  </button>
+
+  <a class="md-standard-icon-button" target="_blank" rel="noreferrer"
+    href="https://google.com">
+   <span class="material-symbols-outlined">star</span></a>
+
+  <span class="material-symbols-outlined">thumb_up</span>
+
+  <button type="button" class="md-fab-primary"
+    style="position: fixed; bottom: 1rem; right: 1rem;">
+   <span class="material-symbols-outlined">add</span>
+  </button>
+
+ </main>
+
+ <nav-drw></nav-drw>
+
+</body>
+
+</html>
