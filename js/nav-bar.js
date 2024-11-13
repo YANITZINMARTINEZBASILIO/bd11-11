@@ -6,24 +6,26 @@ export class NavBar extends HTMLElement {
   this.classList.add("md-navigation-bar")
 
   this.innerHTML = /* HTML */`
-   <a ${resaltaSiEstasEn(["/index.html", "", "/"])} href="index.html">
+ <a ${resaltaSiEstasEn(["/index.html", "", "/"])} href="index.html">
     <span class="material-symbols-outlined">home</span>
     Inicio
    </a>
 
-   <a ${resaltaSiEstasEn(["/navTabFixed.html"])} href="navTabFixed.html">
-    <span class="material-symbols-outlined">tabs</span>
-    Pestañas
+   <a ${resaltaSiEstasEn(["/two-line.html"])} href="two-line.html">
+    <span class="material-symbols-outlined">format_list_numbered</span>
+    Two-line
    </a>
 
-   <a id="navbar" ${resaltaSiEstasEn(["/navbar.html"])} href="navbar.html">
-    <span class="material-symbols-outlined">bottom_navigation</span>
-    Barra
+
+   <a ${resaltaSiEstasEn(["/camara.html"])}
+     href="camara.html">
+    <span class="material-symbols-outlined">add_a_photo</span>
+    Cámara
    </a>
 
-   <a ${resaltaSiEstasEn(["/formulario.html"])} href="formulario.html">
-    <span class="material-symbols-outlined">newspaper</span>
-    Forma
+   <a ${resaltaSiEstasEn(["/ayuda.html"])} href="ayuda.html">
+    <span class="material-symbols-outlined">help</span>
+    Ayuda
    </a>`
 
  }
