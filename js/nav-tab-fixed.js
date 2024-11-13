@@ -9,7 +9,7 @@ export class NavTabFixed extends HTMLElement {
    <a ${resaltaSiEstasEn(["/index.html", "", "/"])} href="index.html">
     <span class="material-symbols-outlined">laundry
     </span>
-    Pasatiempos
+    Playeras
    </a>
 
    <a ${resaltaSiEstasEn(["/ayuda.html"])} href="ayuda.html">
