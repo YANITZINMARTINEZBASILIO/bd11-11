@@ -30,28 +30,17 @@
     .catch(muestraError)">
     <md-top-app-bar adicional="tab" headline="headline">
 
-      <button type="button" class="md-standard-icon-button" style="width: 100%;" type="submit" title="Agregar"
+      <button class="md-standard-icon-button" style="width: 100%;" type="submit" title="Agregar"
         slot="action">
         <span class="material-symbols-outlined">save</span>
       </button>
-
     </md-top-app-bar>
 
     <h1 id="headline">Agregar Playera </h1>
     <nav-tab-fixed id="tab"></nav-tab-fixed>
     <main>
 
-      
-
-      <p><a href="index.html">Cancelar</a></p>
-      <!-- <p>
-        <a href="index.html">
-        <button class="md-outline-button">
-          Cancelar
-        </button>
-      </a>
-      </p> -->
-
+      <button class="md-outline-button"><a href="index.html">Cancelar</a></button>
       <p>
         <label class="md-filled-text-field">
           <input required placeholder="Nombre*" name="nombre">
@@ -86,9 +75,9 @@
           <small>Obligatorio</small>
         </label>
       </p>
-      <p>
+      <!-- <p>
         <button class="md-filled-button" style="width: 100%;" type="submit">Agregar</button>
-      </p>
+      </p> -->
     </main>
 
     <nav-drw></nav-drw>

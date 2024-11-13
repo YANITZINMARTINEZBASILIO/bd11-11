@@ -34,24 +34,27 @@
    .then(respuesta => muestraObjeto(forma, respuesta.body))
    .catch(muestraError)
  }">
-  <md-top-app-bar adicional="tab" headline="headline">
 
-    <button type="submit" class="md-standard-icon-button" title="Guardar" slot="action">
-      <span class="material-symbols-outlined">save</span>
-    </button>
-    <button is="md-overflow-button" slot="action" onclick="overflow.alterna(this)"></button>
 
-  </md-top-app-bar>
-  <h1 id="headline">Modificar datos</h1>
-  <nav-tab-fixed id="tab"></nav-tab-fixed>
-
-  <main>
-    <form id="forma" onsubmit="submitForm('srv/pasatiempo-modifica.php', event)
+  
+    <form id="forma" onsubmit="submitForm('srv/playera-modifica.php', event)
    .then(respuesta => location.href = 'index.html')
    .catch(muestraError)">
 
-      <p><a href="index.html">Cancelar</a></p>
+      <md-top-app-bar adicional="tab" headline="headline">
 
+        <button class="md-standard-icon-button" type="submit" title="Guardar" slot="action">
+          <span class="material-symbols-outlined">save</span>
+        </button>
+
+        <button is="md-overflow-button" slot="action" onclick="overflow.alterna(this)"></button>
+
+      </md-top-app-bar>
+      <h1 id="headline">Modificar datos</h1>
+      <nav-tab-fixed id="tab"></nav-tab-fixed>
+
+      <button class="md-outline-button"><a href="index.html">Cancelar</a></button>
+      <main>
       <input name="id" type="hidden">
 
       <p>
@@ -83,22 +86,20 @@
           <small>Obligatorio</small>
         </label>
       </p>
-      
-
     </form>
   </main>
   <md-overflow-menu id="overflow">
-  
+
     <button type="button" onclick="
     if (params.size > 0 && confirm('Confirma la eliminación')) {
      consumeJson('srv/playera-elimina.php?' + params)
       .then(() => location.href = 'index.html')
       .catch(muestraError)
     }">
-         <span class="material-symbols-outlined"> delete</span> Eliminar
-      </button>
-  
-   </md-overflow-menu>
+      <span class="material-symbols-outlined"> delete</span> Eliminar
+    </button>
+
+  </md-overflow-menu>
   <nav-drw></nav-drw>
 </body>
 
