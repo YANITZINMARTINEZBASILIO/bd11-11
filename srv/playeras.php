@@ -19,12 +19,20 @@ ejecutaServicio(function () {
   $tela = htmlentities($modelo[PLA_TELA]);
   $color = htmlentities($modelo[PLA_COLOR]);
   $render .=
-   "<li>
-     <p>
-      <a href='modifica.html?id=$id'>$nombre</a>
-     </p>
+   " <li class='md-two-line'>
+            <span class='headline'><a href='modifica.html?id=$id'>{$nombre} </a></span>
+            <span class='supporting'>{$talla}</span>
+             <span class='supporting'>{$tela}</span>
+              <span class='supporting'>{$color}</span>
+         </li>
+         <li>
+     
     </li>";
  }
 
  devuelveJson(["lista" => ["innerHTML" => $render]]);
 });
+
+// <p>
+//       <a href='modifica.html?id=$id'>$nombre</a>
+//      </p>
