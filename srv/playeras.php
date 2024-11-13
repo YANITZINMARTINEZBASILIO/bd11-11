@@ -19,15 +19,14 @@ ejecutaServicio(function () {
   $tela = htmlentities($modelo[PLA_TELA]);
   $color = htmlentities($modelo[PLA_COLOR]);
   $render .=
-   " <li class='md-two-line'>
-            <span class='headline'><a href='modifica.html?id=$id'>{$nombre} </a></span>
+   " <a href='modifica.html?id=$id'><li class='md-two-line'>
+   <img alt='Coyote de Neza' src='img/icono2048.png'>
+            <span class='headline'>{$nombre} </span>
             <span class='supporting'>{$talla}</span>
              <span class='supporting'>{$tela}</span>
               <span class='supporting'>{$color}</span>
          </li>
-         <li>
-     
-    </li>";
+         </a>";
  }
 
  devuelveJson(["lista" => ["innerHTML" => $render]]);
