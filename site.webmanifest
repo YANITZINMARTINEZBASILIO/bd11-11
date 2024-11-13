@@ -9,7 +9,7 @@
     "display_override": [
      "window-controls-overlay"
     ],
-    "description": "PWA con Material Design que realiza renderizado en cliente y servidor",
+    "description": "PWA con Material Design que contiene una base de datos",
     "screenshots": [
      {
       "src": "/img/screenshot_horizontal.png",

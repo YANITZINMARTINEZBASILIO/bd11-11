@@ -1,40 +1,97 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="light dark">
 
 <head>
 
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <title>Agregar - BD11:11</title>
 
- <title>Agregar</title>
+  <script src="js/registraServiceWorker.js"></script>
 
- <script type="module" src="lib/js/submitForm.js"></script>
- <script type="module" src="lib/js/muestraError.js"></script>
+  <meta name="viewport" content="width=device-width">
+  <meta name="theme-color" content="#fffbfe">
+  <link rel="icon" sizes="48x48" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+  <script src="ungap/custom-elements.js"></script>
+
+  <script type="module" src="js/configura.js"></script>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/transicion_pestanas.css">
+  <script type="module" src="lib/js/submitForm.js"></script>
+  <script type="module" src="lib/js/muestraError.js"></script>
 
 </head>
 
+
 <body>
 
- <form onsubmit="submitForm('srv/pasatiempo-agrega.php', event)
+  <form onsubmit="submitForm('srv/playera-agrega.php', event)
     .then(modelo => location.href = 'index.html')
     .catch(muestraError)">
+    <md-top-app-bar adicional="tab" headline="headline">
 
-  <h1>Agregar</h1>
+      <button type="button" class="md-standard-icon-button" style="width: 100%;" type="submit" title="Agregar"
+        slot="action">
+        <span class="material-symbols-outlined">save</span>
+      </button>
 
-  <p><a href="index.html">Cancelar</a></p>
+    </md-top-app-bar>
 
-  <p>
-   <label>
-    Nombre *
-    <input name="nombre">
-   </label>
-  </p>
 
-  <p>* Obligatorio</p>
+    <main>
 
-  <p><button type="submit">Agregar</button></p>
+      <h1 id="headline">Agregar Playera </h1>
+      <nav-tab-fixed id="tab"></nav-tab-fixed>
 
- </form>
+      <p><a href="index.html">Cancelar</a></p>
+      <!-- <p>
+        <a href="index.html">
+        <button class="md-outline-button">
+          Cancelar
+        </button>
+      </a>
+      </p> -->
+
+      <p>
+        <label class="md-filled-text-field">
+          <input required placeholder="Nombre*" name="nombre">
+          <span>Nombre *</span>
+          <small>Obligatorio</small>
+        </label>
+      </p>
+      <p>
+
+      <p>
+        <label class="md-filled-text-field">
+          <input required placeholder="Talla*" name="talla">
+          <span>Talla *</span>
+          <small>Obligatorio</small>
+        </label>
+      </p>
+      <p>
+
+      <p>
+        <label class="md-filled-text-field">
+          <input required placeholder="Tela*" name="tela">
+          <span>Tela *</span>
+          <small>Obligatorio</small>
+        </label>
+      </p>
+      <p>
+
+      <p>
+        <label class="md-filled-text-field">
+          <input required placeholder="Color*" name="color">
+          <span>Color *</span>
+          <small>Obligatorio</small>
+        </label>
+      </p>
+      <!-- <p>
+        <button class="md-filled-button" style="width: 100%;" type="submit">Agregar</button>
+      </p> -->
+    </main>
+
+    <nav-drw></nav-drw>
 
 </body>
 

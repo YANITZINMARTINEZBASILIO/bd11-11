@@ -29,5 +29,8 @@ ejecutaServicio(function () {
  devuelveJson([
   "id" => ["value" => $id],
   "nombre" => ["value" => $modelo[PLA_NOM]],
+  "talla" => ["value" => $modelo[PLA_TALLA]],
+  "tela" => ["value" => $modelo[PLA_TELA]],
+  "color" => ["value" => $modelo[PLA_COLOR]],
  ]);
 });

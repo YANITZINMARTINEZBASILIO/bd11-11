@@ -1,68 +1,105 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="light dark">
 
 <head>
 
- <meta charset="UTF-8">
- <meta name="viewport"
-   content="width=device-width">
+  <meta charset="UTF-8">
+  <title>Modificar - BD11:11</title>
 
- <title>Modificar</title>
+  <script src="js/registraServiceWorker.js"></script>
 
- <script type="module" src="lib/js/consumeJson.js"></script>
- <script type="module" src="lib/js/submitForm.js"></script>
- <script type="module" src="lib/js/muestraObjeto.js"></script>
- <script type="module" src="lib/js/muestraError.js"></script>
+  <meta name="viewport" content="width=device-width">
+  <meta name="theme-color" content="#fffbfe">
+  <link rel="icon" sizes="48x48" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+  <script src="ungap/custom-elements.js"></script>
 
- <script>
-  // Obtiene los parámetros de la página.
-  const params = new URL(location.href).searchParams
- </script>
+  <script type="module" src="js/configura.js"></script>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/transicion_pestanas.css">
+  <script type="module" src="lib/js/submitForm.js"></script>
+  <script type="module" src="lib/js/muestraError.js"></script>
+  <script type="module" src="lib/js/consumeJson.js"></script>
+  <script type="module" src="lib/js/muestraObjeto.js"></script>
+
+  <script>
+    // Obtiene los parámetros de la página.
+    const params = new URL(location.href).searchParams
+  </script>
 
 </head>
 
 <body onload="if (params.size > 0) {
-   consumeJson('srv/pasatiempo.php?' + params)
-    .then(respuesta => muestraObjeto(forma, respuesta.body))
-    .catch(muestraError)
-  }">
+  consumeJson('srv/playera.php?' + params)
+   .then(respuesta => muestraObjeto(forma, respuesta.body))
+   .catch(muestraError)
+ }">
+  <md-top-app-bar adicional="tab" headline="headline">
 
- <form id="forma" onsubmit="submitForm('srv/pasatiempo-modifica.php', event)
-    .then(respuesta => location.href = 'index.html')
-    .catch(muestraError)">
+    <button type="submit" class="md-standard-icon-button" title="Guardar" slot="action">
+      <span class="material-symbols-outlined">save</span>
+    </button>
+    <button is="md-overflow-button" slot="action" onclick="overflow.alterna(this)"></button>
 
-  <h1>Modificar</h1>
+  </md-top-app-bar>
+  <h1 id="headline">Modificar datos</h1>
+  <nav-tab-fixed id="tab"></nav-tab-fixed>
 
-  <p><a href="index.html">Cancelar</a></p>
+  <main>
+    <form id="forma" onsubmit="submitForm('srv/pasatiempo-modifica.php', event)
+   .then(respuesta => location.href = 'index.html')
+   .catch(muestraError)">
 
-  <input name="id" type="hidden">
+      <p><a href="index.html">Cancelar</a></p>
 
-  <p>
-   <label>
-    Nombre *
-    <input name="nombre" value="Cargando&hellip;">
-   </label>
-  </p>
+      <input name="id" type="hidden">
 
-  <p>* Obligatorio</p>
+      <p>
+        <label class="md-filled-text-field">
+          <input required value="Cargando&hellip;" name="nombre">
+          <span>Nombre *</span>
+          <small>Obligatorio</small>
+        </label>
+      </p>
 
-  <p>
+      <p>
+        <label class="md-filled-text-field">
+          <input required value="Cargando&hellip;" name="talla">
+          <span>Talla *</span>
+          <small>Obligatorio</small>
+        </label>
+      </p>
+      <p>
+        <label class="md-filled-text-field">
+          <input required value="Cargando&hellip;" name="tela">
+          <span>Tela *</span>
+          <small>Obligatorio</small>
+        </label>
+      </p>
+      <p>
+        <label class="md-filled-text-field">
+          <input required value="Cargando&hellip;" name="color">
+          <span>Color *</span>
+          <small>Obligatorio</small>
+        </label>
+      </p>
+      
 
-   <button type="submit">Guardar</button>
-
-   <button type="button" onclick="
-     if (params.size > 0 && confirm('Confirma la eliminación')) {
-      consumeJson('srv/pasatiempo-elimina.php?' + params)
-       .then(() => location.href = 'index.html')
-       .catch(muestraError)
-     }">
-    Eliminar
-   </button>
-
-  </p>
-
- </form>
-
+    </form>
+  </main>
+  <md-overflow-menu id="overflow">
+  
+    <button type="button" onclick="
+    if (params.size > 0 && confirm('Confirma la eliminación')) {
+     consumeJson('srv/playera-elimina.php?' + params)
+      .then(() => location.href = 'index.html')
+      .catch(muestraError)
+    }">
+         <span class="material-symbols-outlined"> delete</span> Eliminar
+      </button>
+  
+   </md-overflow-menu>
+  <nav-drw></nav-drw>
 </body>
 
 </html>

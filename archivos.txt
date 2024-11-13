@@ -1,7 +1,5 @@
  "ayuda.html",
  "index.html",
- "cliente.html",
- "servidor.html",
  "css/estilos.css",
  "css/tokens.css",
  "img/icono2048.png",

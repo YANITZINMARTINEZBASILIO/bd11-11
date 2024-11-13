@@ -16,6 +16,8 @@ export class NavTabFixed extends HTMLElement {
     <span class="material-symbols-outlined">help</span>
     Ayuda
    </a>`
+
+   
   }
 
 }
