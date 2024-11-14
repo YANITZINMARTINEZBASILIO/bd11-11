@@ -35,27 +35,31 @@
    .catch(muestraError)
  }">
 
+  <a href="index.html">
+    <button class="md-standard-icon-button" type="submit" title="Cancelar" slot="navigation">
+      <span class="material-symbols-outlined">cancel</span>
+    </button>
+  </a>
 
-  
-    <form id="forma" onsubmit="submitForm('srv/playera-modifica.php', event)
+  <form id="forma" onsubmit="submitForm('srv/playera-modifica.php', event)
    .then(respuesta => location.href = 'index.html')
    .catch(muestraError)">
 
-      <md-top-app-bar adicional="tab" headline="headline">
+    <md-top-app-bar adicional="tab" headline="headline">
 
-        <button class="md-standard-icon-button" type="submit" title="Guardar" slot="action">
-          <span class="material-symbols-outlined">save</span>
-        </button>
+      <button class="md-standard-icon-button" type="submit" title="Guardar" slot="action">
+        <span class="material-symbols-outlined">save</span>
+      </button>
 
-        <button is="md-overflow-button" slot="action" onclick="overflow.alterna(this)"></button>
+      <button is="md-overflow-button" slot="action" onclick="overflow.alterna(this)"></button>
 
-      </md-top-app-bar>
-      <h1 id="headline">Modificar datos</h1>
-      <nav-tab-fixed id="tab"></nav-tab-fixed>
+    </md-top-app-bar>
+    <h1 id="headline">Modificar datos</h1>
+    <nav-tab-fixed id="tab"></nav-tab-fixed>
 
-     
-      <main>
-        <button class="md-outline-button"><a href="index.html">Cancelar</a></button>
+
+    <main>
+      <!-- <button class="md-outline-button"><a href="index.html">Cancelar</a></button> -->
       <input name="id" type="hidden">
 
       <p>
@@ -87,7 +91,7 @@
           <small>Obligatorio</small>
         </label>
       </p>
-    </form>
+  </form>
   </main>
   <md-overflow-menu id="overflow">
 
