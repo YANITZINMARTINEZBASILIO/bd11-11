@@ -15,7 +15,7 @@
  * conoce como número menor y se cambia cuando se realizan
  * modificaciones menores.
  */
-const VERSION = "1.14"
+const VERSION = "1.15"
 
 /**
  * Nombre de la carpeta de caché.
@@ -30,7 +30,15 @@ const ARCHIVOS = [
  "ayuda.html",
  "index.html",
  "cliente.html",
- "css/tokens.css",
+ "css/dark-hc.css",
+ "css/dark-mc.css",
+ "css/dark.css",
+ "css/estilos.css",
+ "css/light-hc.css",
+ "css/light-mc.css",
+ "css/light.css",
+ "css/transicion_completa.css",
+ "css/transicion_pestanas.css",
  "img/icono2048.png",
  "img/maskable_icon.png",
  "img/maskable_icon_x128.png",
