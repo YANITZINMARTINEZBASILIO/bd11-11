@@ -35,11 +35,6 @@
    .catch(muestraError)
  }">
 
-  <a href="index.html">
-    <button class="md-standard-icon-button" type="submit" title="Cancelar" slot="navigation">
-      <span class="material-symbols-outlined">cancel</span>
-    </button>
-  </a>
 
   <form id="forma" onsubmit="submitForm('srv/playera-modifica.php', event)
    .then(respuesta => location.href = 'index.html')
@@ -47,6 +42,11 @@
 
     <md-top-app-bar adicional="tab" headline="headline">
 
+      <a href="index.html">
+        <button class="md-standard-icon-button" type="button" title="Cancelar" slot="navigation">
+          <span class="material-symbols-outlined">cancel</span>
+        </button>
+      </a>
       <button class="md-standard-icon-button" type="submit" title="Guardar" slot="action">
         <span class="material-symbols-outlined">save</span>
       </button>

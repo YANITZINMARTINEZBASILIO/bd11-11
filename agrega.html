@@ -23,16 +23,16 @@
 
 
 <body>
-  <a href="index.html">
-    <button class="md-standard-icon-button" type="submit" title="Cancelar" slot="navigation">
-      <span class="material-symbols-outlined">cancel</span>
-    </button>
-  </a>
+  
   <form onsubmit="submitForm('srv/playera-agrega.php', event)
     .then(modelo => location.href = 'index.html')
     .catch(muestraError)">
     <md-top-app-bar adicional="tab" headline="headline">
-
+      <a href="index.html">
+        <button class="md-standard-icon-button" type="button" title="Cancelar" slot="navigation">
+          <span class="material-symbols-outlined">cancel</span>
+        </button>
+      </a>
 
       <button class="md-standard-icon-button" type="submit" title="Agregar" slot="action">
         <span class="material-symbols-outlined">save</span>

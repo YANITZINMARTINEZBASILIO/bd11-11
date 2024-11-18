@@ -15,7 +15,7 @@
  * conoce como número menor y se cambia cuando se realizan
  * modificaciones menores.
  */
-const VERSION = "1.15"
+const VERSION = "1.16"
 
 /**
  * Nombre de la carpeta de caché.
@@ -27,9 +27,10 @@ const CACHE = "pwamd"
  * línea.
  */
 const ARCHIVOS = [
- "ayuda.html",
+ "agrega.html",
+ "modifica.html",
+  "ayuda.html",
  "index.html",
- "cliente.html",
  "css/dark-hc.css",
  "css/dark-mc.css",
  "css/dark.css",
@@ -37,7 +38,6 @@ const ARCHIVOS = [
  "css/light-hc.css",
  "css/light-mc.css",
  "css/light.css",
- "css/transicion_completa.css",
  "css/transicion_pestanas.css",
  "img/icono2048.png",
  "img/maskable_icon.png",
